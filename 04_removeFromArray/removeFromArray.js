@@ -1,4 +1,13 @@
-const removeFromArray = function() {
+const removeFromArray = function(array,...values) {
+
+  return array.filter(function(item){
+    for(let val of values){
+      if (item === val) {
+        return false;
+      }
+    }
+    return true;
+  });
 
 };
 
